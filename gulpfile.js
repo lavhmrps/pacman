@@ -63,7 +63,7 @@ gulp.task("sfx", function(){
 
 gulp.task("watch", function(){
 	gulp.watch("src/*.html", ["html"]);
-	gulp.watch("src/js/*.js", ["scripts", "scripts-uglify"]);
+	gulp.watch("src/js/*.js", ["scripts"/*, "scripts-uglify"*/]);
 	gulp.watch("src/css/*.css", ["css"]);
 	gulp.watch("src/sass/**/*.scss", ["sass"]);
 	gulp.watch("src/res/**/*.*", ["res"]);
@@ -71,4 +71,4 @@ gulp.task("watch", function(){
 });
 
 
-gulp.task("default",["server","html","scripts", "scripts-uglify", "css", "sass", "res", "sfx", "watch"]);
+gulp.task("default",["server","html","scripts",/* "scripts-uglify",*/ "css", "sass", "res", "sfx", "watch"]);
